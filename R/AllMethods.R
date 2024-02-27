@@ -578,6 +578,7 @@ setMethod("differentiallyExpressed", "Transcriptogram", function(object,
     object@status = 3L
     object@DE = DElimma
     object@clusters = pBreaks
+    object@plot = p
     message("done!")
     return(object)
 })
