@@ -522,9 +522,9 @@ setMethod("differentiallyExpressed", "Transcriptogram", function(object,
     invisible(sapply(seq.int(1, length(pBreaks)), function(i) {
       idx <- which(df$x >= pBreaks[[i]][1] & df$x <= pBreaks[[i]][2])
       aux <- data.frame(x = df$x[idx], y = df$y[idx])
-      p <<- p + ggplot2::geom_line(data = aux, lwd = 1.4, col = myColors[i],
-                                   ggplot2::aes_string(x = "x", y = "y")) +
-        ggplot2::geom_line(ggplot2::aes_string(linetype = '"lines"'))
+      p <<- p + ggplot2::geom_line(data = aux, lwd = 1.4, col = myColors[i], 
+                                   ggplot2::aes_string(x = "x", y = "y", group = 1)) +
+        ggplot2::geom_line(ggplot2::aes_string(linetype = '"lines"', group = 1))
       return(NULL)
     }))
     suppressMessages(graphics::plot(p))
