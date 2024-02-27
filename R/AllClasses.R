@@ -32,6 +32,8 @@
 #'
 #' @slot Protein2GO A data.frame containing two columns, the first one with
 #' ENSEMBL Peptide IDs, and the second containing its respective Gene Ontology accession.
+#' 
+#' @slot plot a ggplot2  object representing the transcriptogram.
 #'
 #' @slot Terms A data.frame containing the enriched Gene Ontology terms.
 #'
